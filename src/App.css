@@ -10,9 +10,12 @@
 
 body {
     /* background-color: #c7e5c8; */
-    color: #1d2e36;
+    color: #ffffff;
     font-family: "Jost", sans-serif;
     font-size: 14px;
+    background-color: #000000;
+    text-align: center;
+    padding: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -702,11 +705,13 @@ a {
     transition: background-color 0.3s;
     border: none;
     border-radius: 4px;
-    font-size: 12px;
-    padding: 5px 8px;
+    font-size: 6px;
+    padding: 2px 2px;
 
 }
-
+.new-box span{
+    font-size: 18px;
+}
 
 .google-play-store a {
     transition: transform 0.3s;
@@ -876,7 +881,7 @@ a {
     /* border-radius: 24px; */
     /* margin: 15px; */
     /* background-color: #c7e5c8; */
-    color: #000000;
+    color: #ffffff;
     margin-top: 30px;
     /* border-top:1px solid rgb(233, 132, 0); */
     /* border-bottom:1px solid rgb(233, 132, 0); */
