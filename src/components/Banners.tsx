@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { websiteUrl } from '../assets/index.ts'
 import { useGreetingBanner, useNoticeBanner, useVisitors } from "../hooks/useHome.ts"
 import { useLatestResults } from "../hooks/useResults.ts"
+import "../App.css"
 
 export const GreetingBanner = () => {
   const { greetingBanner } = useGreetingBanner()
