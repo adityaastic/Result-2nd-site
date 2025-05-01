@@ -49,9 +49,7 @@ export const ResultsGrid = () => {
 export const ResultsTables = () => {
   const result = useResults({ active: "True", refund: "False" });
   const { markets } = useMarkets();
-
   const [selectedMonthDates, setSelectedMonthDates] = useState<Date[]>([]);
-
   useEffect(() => {
     const month = moment().month();
     const year = moment().year();
@@ -64,7 +62,7 @@ export const ResultsTables = () => {
 
   // Filter markets where status is true (active markets)
   const activeMarkets = useMemo(() => {
-    return markets?.filter((market: IMarket) => market.status === true);
+    return markets?.filter((market: IMarket) => market.status);
   }, [markets]);
 
   // Function to generate table rows, memoized to avoid unnecessary re-renders

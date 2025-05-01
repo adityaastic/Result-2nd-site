@@ -41,11 +41,10 @@ export const ResultsChart = () => {
   const isCurrentMonth = useMemo(() => date === getCurrentMonth(), [date]);
 
   const activeMarkets = useMemo(() => {
-    if (isCurrentMonth) {
-    
-      return markets?.filter((m: IMarket) => m.status === true);
-    }
-    return markets; 
+    // if (isCurrentMonth) {
+      return markets?.filter((m: IMarket) => m.status);
+    // }
+    // return markets; 
   }, [markets, isCurrentMonth]);
 
   const filteredResults = useMemo(() => {
@@ -61,7 +60,7 @@ export const ResultsChart = () => {
           const resultForMarket = filteredResults.find(
             (res: IResult) =>
               res.market_name === market.market &&
-              moment(res.created_at).format("DD MM YYYY") === moment(date).format("DD MM YYYY")
+              moment(res.created_at).format("DD MM YYYY") === moment(date).format("DD MM YYYY") 
           );
           return (
             <td key={market.id} style={{ width: "5%", textAlign: "center" }}>
@@ -72,7 +71,7 @@ export const ResultsChart = () => {
       </tr>
     ));
   }, [selectedMonthDates, filteredResults, activeMarkets]);
-
+console.log(activeMarkets)
   return (
     <>
       <div className="main-content">
